@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Instagram, Heart, Sparkles, Calendar, Clock } from "lucide-react";
+import groomPortrait from "../assets/images/groom_bio_portrait_1781239923038.jpg";
+import bridePortrait from "../assets/images/bride_bio_portrait_1781239907755.jpg";
 
 interface HomeProps {
   weddingDate: Date;
@@ -80,7 +82,7 @@ export default function Home({ weddingDate }: HomeProps) {
           {/* Portrait Container */}
           <div className="relative w-44 h-44 mb-6 rounded-2xl overflow-hidden shadow-md border-3 border-white">
             <img
-              src="/src/assets/images/groom_bio_portrait_1781239923038.jpg"
+              src={groomPortrait}
               alt="Rizky Pratama"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
@@ -123,7 +125,7 @@ export default function Home({ weddingDate }: HomeProps) {
           {/* Portrait Container */}
           <div className="relative w-44 h-44 mb-6 rounded-2xl overflow-hidden shadow-md border-3 border-white">
             <img
-              src="/src/assets/images/bride_bio_portrait_1781239907755.jpg"
+              src={bridePortrait}
               alt="Amanda Putri"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"

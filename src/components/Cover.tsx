@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Mail, Calendar, Heart } from "lucide-react";
 import FallingLeaves from "./FallingLeaves";
+import coupleHero from "../assets/images/couple_hero_1781239748391.jpg";
 
 interface CoverProps {
   onOpen: () => void;
@@ -76,7 +77,7 @@ export default function Cover({ onOpen, coupleNames, weddingDateFormatted }: Cov
             <path d="M50,96 A46,46 0 0,1 4,50" fill="none" stroke="currentColor" strokeWidth="1" strokeDelay="0.5" />
           </svg>
           <img
-            src="/src/assets/images/couple_hero_1781239748391.jpg"
+            src={coupleHero}
             alt="Amanda & Rizky"
             className="w-full h-full object-cover rounded-full"
             referrerPolicy="no-referrer"

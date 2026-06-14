@@ -1,28 +1,32 @@
 import { useState, MouseEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import couple1 from "../assets/images/couple_photo_1_1781239763916.jpg";
+import couple2 from "../assets/images/couple_photo_2_1781239778466.jpg";
+import couple3 from "../assets/images/couple_photo_3_1781239798534.jpg";
+import coupleHero from "../assets/images/couple_hero_1781239748391.jpg";
 
 const GALLERY_IMAGES = [
   {
-    src: "/src/assets/images/couple_photo_1_1781239763916.jpg",
+    src: couple1,
     title: "Kebersamaan Hangat",
     desc: "Tertawa bersama di rimbunnya kebun raya",
     size: "md:col-span-2 md:row-span-1"
   },
   {
-    src: "/src/assets/images/couple_photo_2_1781239778466.jpg",
+    src: couple2,
     title: "Ikatan Suci",
     desc: "Simbol komitmen seumur hidup",
     size: "md:col-span-1 md:row-span-1"
   },
   {
-    src: "/src/assets/images/couple_photo_3_1781239798534.jpg",
+    src: couple3,
     title: "Berjalan Bersama",
     desc: "Langkah awal menyusuri takdir bersama",
     size: "md:col-span-1 md:row-span-1"
   },
   {
-    src: "/src/assets/images/couple_hero_1781239748391.jpg",
+    src: coupleHero,
     title: "Janji Di Bawah Rindang",
     desc: "Menatap masa depan berdua",
     size: "md:col-span-2 md:row-span-1"
