@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-script: "Alex Brush", cursive;
+
+  --color-sage-50: #f5f7f5;
+  --color-sage-100: #e6ede8;
+  --color-sage-200: #cedece;
+  --color-sage-400: #9cb1a2;
+  --color-sage-500: #738a7c;
+  --color-sage-600: #5b7163;
+  --color-sage-700: #4a5c50;
+  --color-wood-50: #faf7f2;
+  --color-wood-100: #f1ebd9;
+  --color-wood-200: #e5dac2;
+  --color-wood-500: #93765c;
+  --color-wood-700: #785a41;
+  --color-wood-800: #5c432f;
+  --color-terracotta-500: #cf8164;
+  --color-terracotta-600: #b3674c;
+  --color-cream-50: #fefcf9;
+  --color-cream-100: #fbf5eb;
+  --color-cream-200: #f5ead3;
+
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-float-slow: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(6deg);
+  }
+}
+
+/* Custom Paper Texture Overlay */
+.paper-texture {
+  position: relative;
+}
+
+.paper-texture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: radial-gradient(#7a5c43 1px, transparent 1px), radial-gradient(#7a5c43 1px, transparent 1px);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Hide scrollbar when invitation is locked */
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+/* Soft elegant glow styling */
+.glow-subtle {
+  box-shadow: 0 4px 30px rgba(115, 138, 124, 0.08);
+}
+
+/* Beautiful custom divider */
+.botanical-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color-sage-500);
+}
+
+.botanical-divider::before,
+.botanical-divider::after {
+  content: "";
+  height: 1px;
+  width: 3rem;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+/* Fallback leaf falling animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(105vh) translateX(50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.leaf-falling {
+  position: absolute;
+  pointer-events: none;
+  animation: fall var(--fall-duration, 12s) linear infinite;
+  animation-delay: var(--fall-delay, 0s);
+  left: var(--fall-left, 10%);
+}
+
+/* Smooth continuous vinyl disk spinning */
+@keyframes disk-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-vinyl {
+  animation: disk-spin 6s linear infinite;
+}

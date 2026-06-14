@@ -1,0 +1,6 @@
+{
+  "name": "Rustic Botanical Wedding Invitation",
+  "description": "An elegant, interactive, and responsive 3D Wedding Invitation website styled with rustic & botanical elements. Features a romantic music player, groom & bride autobiography, countdown timer, detailed event information, interactive guest book RSVP, memories gallery, and copyable virtual love gift templates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
